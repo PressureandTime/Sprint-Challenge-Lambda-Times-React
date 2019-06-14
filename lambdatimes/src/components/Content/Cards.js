@@ -15,14 +15,9 @@ const Cards = props => {
   );
 };
 
-
 Cards.propTypes = {
   card: PropTypes.string
-}
-
-
-
-
+};
 
 // Make sure you include prop types for all of your incoming props
 

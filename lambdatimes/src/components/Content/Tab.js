@@ -22,14 +22,9 @@ const Tab = props => {
   );
 };
 
-
 Tab.propTypes = {
   tab: PropTypes.string
-}
-
-
-
-
+};
 
 // Make sure you include PropTypes on your props.
 

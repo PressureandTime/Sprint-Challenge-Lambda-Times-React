@@ -15,13 +15,11 @@ const Card = props => {
   );
 };
 
-
-
 Card.propTypes = {
-  img: PropTypes.string
-}
-
-
+  img: PropTypes.string,
+  author: PropTypes.string,
+  headline: PropTypes.string
+};
 
 // Make sure to include PropTypes.
 
