@@ -10,7 +10,7 @@ const TopBarStyled = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
-`
+`;
 
 const Container = styled.div`
   width: 100%;
@@ -21,40 +21,45 @@ const Container = styled.div`
   color: #fff;
   letter-spacing: 1px;
   padding: 0 10px;
+`;
 
-  
-   .container-left {
+const StyledContainerLeft = styled.div`
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: row;
   flex: 1;
   font-size: 11px;
-}
- .container-left span {
-  cursor: pointer;
-  margin-right: 25%;
-  font-weight: bold;
-}
- .container-center {
+
+  span {
+    cursor: pointer;
+    margin-right: 25%;
+    font-weight: bold;
+  }
+`;
+
+const StyledContainerCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex: 3;
   font-size: 9px;
-}
- .container-center span {
-  cursor: pointer;
-  margin-right: 5%;
-}
- .container-center span:last-child {
-  margin-right: 0;
-}
- .container-center span:hover {
-  text-decoration: underline;
-}
- .container-right {
+
+  span {
+    cursor: pointer;
+    margin-right: 5%;
+  }
+  span:last-child {
+    margin-right: 0;
+  }
+
+  span:hover {
+    text-decoration: underline;
+  }
+`;
+
+const StyledContainerRight = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -62,36 +67,40 @@ const Container = styled.div`
   flex: 1;
   font-size: 11px;
   font-weight: bold;
-}
- .container-right span {
-  cursor: pointer;
-}
+
+  span {
+    cursor: pointer;
+  }
 
   @media (min-width: 1280px) {
     width: 1280px;
   }
 `;
 
-
-// Refactor this component to use styled components and not classNames. 
+// Refactor this component to use styled components and not classNames.
 // You can find the corresponding CSS in the CSS/index.css file
 
 const TopBar = () => {
   return (
     <TopBarStyled>
       <Container>
-        <div className="container-left">
-          <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
+        <StyledContainerLeft>
+          <span>TOPICS</span>
+          <span>SEARCH</span>
+        </StyledContainerLeft>
+        <StyledContainerCenter>
+          <span>GENERAL</span>
+          <span>BROWNBAG</span>
+          <span>RANDOM</span>
+          <span>MUSIC</span>
+          <span>ANNOUNCEMENTS</span>
+        </StyledContainerCenter>
+        <StyledContainerRight>
           <span>LOG IN</span>
-        </div>
+        </StyledContainerRight>
       </Container>
     </TopBarStyled>
-  )
-}
+  );
+};
 
 export default TopBar;
