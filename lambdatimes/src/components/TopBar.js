@@ -1,10 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import {
-//   TopBarContainer,
-//   insideOfTopBarContainer,
-// } from './TopBarStyle'
-
 
 const TopBarStyled = styled.div`
   width: 100%;
@@ -72,46 +67,10 @@ const Container = styled.div`
   cursor: pointer;
 }
 
-
-
   @media (min-width: 1280px) {
     width: 1280px;
   }
 `;
-
-
-// const TopBarContainer = styled.div`
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: none;
-//   flex-direction: row;
-//   position: fixed;
-//   height: 44px;
-//   background-color: #333;
-
-// `;
-
-
-// const StyledTopBar = styled.div`
-//   width: 100%;
-//   display: flex;
-//   justify-content: none;
-//   align-items: none;
-//   flex-direction: row;
-//   color: #fff;
-//   letter-spacing: 1px;
-//   padding: 0 10px;
- 
-
-//   @media (min-width: 1280px) {
-   
-//     width: 1280px;
-//   }
-
-
-// `;
-
 
 
 // Refactor this component to use styled components and not classNames. 
